@@ -1,0 +1,9 @@
+proto_outdir = "./proto"
+
+[[dependencies]]
+  target = "github.com/kodaikumatani/protobuf-client/proto"
+  subgroup = ""
+  revision = "94583e1ea5e57f6a991a139f57125876d07cfbfb"
+  branch = "main"
+  path = ""
+  protocol = ""

@@ -1,0 +1,27 @@
+name: Sync Protobuf
+on:
+  push:
+
+jobs:
+  sync-protobuf-to-clint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: '>=1.19.0'
+          cache: true
+          cache-dependency-path: go.sum
+
+      - name: OS Version
+        run: cat /etc/os-release
+
+      - name: Go Version
+        run: go version
+
+      - name: Setup
+        run: |
+          go install github.com/stormcat24/protodep@latest
